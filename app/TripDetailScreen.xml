@@ -1,0 +1,10 @@
+<!-- TripDetailScreen.xml -->
+
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+  <ActionBar :title="trip.title" />
+  <StackLayout padding="20">
+    <Label :text="`Date: ${trip.date}`" />
+    <!-- Add more details like images, companions, places visited, etc. -->
+    <Button text="Expenses" tap="navigateToExpenses" />
+  </StackLayout>
+</Page>

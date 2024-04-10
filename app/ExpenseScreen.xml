@@ -1,0 +1,14 @@
+<!-- ExpenseScreen.xml -->
+
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+  <ActionBar title="Expenses" />
+  <StackLayout padding="20">
+    <Label :text="`Total Expenses: ${totalExpenses}`" />
+    <TextField hint="Expense description" text="{{ expenseDescription }}" />
+    <TextField hint="Amount" keyboardType="numeric" text="{{ expenseAmount }}" />
+    <Button text="Add Expense" tap="addExpense" />
+    <StackLayout marginTop="20">
+      <Label v-for="(expense, index) in expenses" :key="index" :text="`${expense.description}: ${expense.amount}`" />
+    </StackLayout>
+  </StackLayout>
+</Page>
